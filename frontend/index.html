@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diet Analysis Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Cloud Diet Analysis Dashboard</h1>
+    <p class="subtitle">Azure Function + Azure Blob Storage + Dashboard UI</p>
+
+    <div class="controls">
+      <button id="refreshBtn">Refresh Data</button>
+    </div>
+
+    <div class="meta">
+      <div class="card meta-card">
+        <h3>Execution Time</h3>
+        <p id="execTime">Loading...</p>
+      </div>
+      <div class="card meta-card">
+        <h3>Total Rows</h3>
+        <p id="rowCount">Loading...</p>
+      </div>
+      <div class="card meta-card">
+        <h3>Total Columns</h3>
+        <p id="colCount">Loading...</p>
+      </div>
+    </div>
+
+    <div class="charts-grid">
+      <div class="card">
+        <h2>Bar Chart</h2>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h2>Pie Chart</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <div class="card full-width">
+        <h2>Line Chart</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
